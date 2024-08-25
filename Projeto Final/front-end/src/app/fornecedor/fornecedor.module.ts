@@ -9,9 +9,14 @@ import { FornecedorAppComponent } from './fornecedor.app.component';
 import { ListaComponent } from './lista/lista.component';
 import { FornecedorService } from './services/fornecedor.service';
 
+import { NgBrazil } from 'ng-brazil';
+import { TextMaskModule } from 'angular2-text-mask';
+
 import { EditarComponent } from './editar/editar.component';
 import { ExcluirComponent } from './excluir/excluir.component';
 import { DetalhesComponent } from './detalhes/detalhes.component';
+import { FornecedorResolve } from './services/fornecedor.resolve';
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 @NgModule({
   declarations: [
@@ -28,7 +33,10 @@ import { DetalhesComponent } from './detalhes/detalhes.component';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    NgBrazil,
+    TextMaskModule,
+    NgxSpinnerModule,
   ],
-  providers: [FornecedorService],
+  providers: [FornecedorService, FornecedorResolve],
 })
 export class FornecedorModule {}

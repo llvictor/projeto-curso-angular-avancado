@@ -18,14 +18,14 @@
     </thead>
     <tr *ngFor="let fornecedor of fornecedores">
       <td>
-        {{ fornecedor.name }}
+        {{ fornecedor.nome }}
       </td>
       <td>
-        {{ fornecedor.document }}
+        {{ fornecedor.documento }}
       </td>
       <td>
         <input
-          [checked]="fornecedor.active"
+          [checked]="fornecedor.ativo"
           class="check-box"
           disabled="disabled"
           type="checkbox"
