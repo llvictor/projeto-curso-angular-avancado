@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { NovoComponent } from './novo/novo.component';
@@ -17,6 +16,7 @@ import { ExcluirComponent } from './excluir/excluir.component';
 import { DetalhesComponent } from './detalhes/detalhes.component';
 import { FornecedorResolve } from './services/fornecedor.resolve';
 import { NgxSpinnerModule } from 'ngx-spinner';
+import { FornecedorGuard } from './services/fornecedor.guard';
 
 @NgModule({
   declarations: [
@@ -32,11 +32,10 @@ import { NgxSpinnerModule } from 'ngx-spinner';
     FornecedorRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule,
     NgBrazil,
     TextMaskModule,
     NgxSpinnerModule,
   ],
-  providers: [FornecedorService, FornecedorResolve],
+  providers: [FornecedorService, FornecedorResolve, FornecedorGuard],
 })
 export class FornecedorModule {}

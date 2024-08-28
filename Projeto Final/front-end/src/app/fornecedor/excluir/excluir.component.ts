@@ -13,7 +13,8 @@ import { DomSanitizer } from '@angular/platform-browser';
 })
 export class ExcluirComponent {
   fornecedor: Fornecedor = new Fornecedor();
-  public enderecoMap;
+  enderecoMap;
+  errors: any[] = [];
 
   constructor(
     private fornecedorService: FornecedorService,
